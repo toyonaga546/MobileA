@@ -51,13 +51,7 @@ public class PrefDataStore {
         return dataStore.data()
                 .map(prefs -> {
                     var prefKey = PreferencesKeys.stringKey(key);
-
-
-
                     return Optional.ofNullable(prefs.get(prefKey));
-
-
-
                 })
                 .blockingFirst();
     }
